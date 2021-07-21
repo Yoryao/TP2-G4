@@ -31,5 +31,5 @@ app.get('*', (req, res) => {
 });
 
 app.listen(process.env.PUERTO, () => {
-    console.log('Servidor escuchando en el puerto ', PUERTO);
+    console.log('Servidor escuchando en el puerto ', port);
 });
