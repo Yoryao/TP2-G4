@@ -7,10 +7,10 @@ export default function ObtenerCategorias() {
     const [cat, setCat] = React.useState([]);
 
     const fetchData = async () => {
-        const retornoCategoria = await axios.get('//insertar ruta')
+        const retornoCategoria = await axios.get('http://localhost:3000/categoria')
             if (retornoCategoria === 200) {
-                console.log(retornoCategoria);
-                setCat(retornoCategoria.data.response);
+                console.log(retornoCategoria.cat);
+                setCat(retornoCategoria.cat.response);
             }
     };
 
@@ -18,19 +18,17 @@ export default function ObtenerCategorias() {
         fetchData();
     }, []);
 
-    const listaCategoria = data.map((cat) => {
-
+    const listaCategoria = cat.map((cat) => {
+      return (
+        <div classname="idCategoria" key={cat.id}>
+            <div className="nombreCategoria">{cat.nombre}</div>
+        </div>
+      )
     })
-  return (
-          <div className = 'container'>
+
+    return (
+          <div className = 'ejemplo'>
             {listaCategoria}
           </div>
         );
 }
-
-
-export default function Listado() {
-
-        const respuesta = await axios.get('http://localhost:4000/libro');
-    
-     
