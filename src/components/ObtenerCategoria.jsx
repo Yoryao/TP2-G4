@@ -28,6 +28,7 @@ export default function ObtenerCategorias() {
 
     return (
           <div className = 'ejemplo'>
+            <h1>Aca deberian estar las categorias</h1>
             {listaCategoria}
           </div>
         );
