@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 ReactDOM.render( <
     React.StrictMode >
     <
+    h3 > aca esta index.js del src < /h3> <
     App / >
     <
     /React.StrictMode>,
